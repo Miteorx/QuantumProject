@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Quantum</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <a class="p-2 text-dark" href="/">Check ticket</a>
+    <a class="p-2 text-dark" href="/bag">Check bag</a>
+    <a class="p-2 text-dark" href="/coupon">Add coupon</a>
+</div>
+<div class="container mt-5 mb-5">
+    <form action="/bag" method="post">
+        <input type="text" name="destinationId" placeholder="Destination Id" class="form-control"><br>
+        <input type="text" name="baggageId" placeholder="Bagage Id" class="form-control"><br>
+        <button type="submit" class="btn btn-warning">Check-in</button>
+    </form>
+</div>
+<div th:if="${message}", th:text="${message}">
+
+</div>
+</body>
+</html>
